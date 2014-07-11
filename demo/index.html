@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>unique-colors DEMO</title>
+  <style>
+  body {
+    font-family: 'Menlo';
+  }
+
+  #range {
+    width: 98%;
+    display: inline;
+  }
+
+  #range-label {
+    width: 2%;
+  }
+
+  .square {
+    float: left;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+
+  .square:after {
+    content: attr(data-color);
+    font-size: 16px;
+    color: white;
+    background-color: rgba(128,128,128,0.4);
+    padding: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: none;
+  }
+
+  .square:hover:after {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <div>
+    <input id="range" type="range" min="0" max="92" value="25" step="1" onchange="on_change_range(value)"/>
+    <span id="range-label">25</span>
+  </div>
+  <div id="output"></div>
+  <script src="../unique-colors.js"></script>
+  <script>
+    var label = document.getElementById('range-label');
+    var output = document.getElementById('output');
+    function  on_change_range (value) {
+      // update label
+      label.innerHTML = value;
+
+      // clear old input
+      while (output.firstChild) {
+        output.removeChild(output.firstChild);
+      }
+
+      // var colors = unique_colors(value);
+      var colors = unique_random_colors(value);
+      var elment;
+      var i;
+
+      for (i = 0; i < value; i += 1) {
+        element = document.createElement('div');
+        element.className = 'square';
+        element.style.backgroundColor = colors[i];
+        element.setAttribute('data-color', colors[i]);
+        output.appendChild(element);
+      }
+    };
+  </script>
+  <script>
+    on_change_range(25);
+  </script>
+</body>
+</html>

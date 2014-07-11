@@ -1,0 +1,23 @@
+{
+  "name": "unique-colors",
+  "version": "0.1.0",
+  "homepage": "https://github.com/spini/unique-colors",
+  "authors": [
+    "Federico Spini <federico.spini@gmail.com>"
+  ],
+  "description": "Perceptually unique colors generator (up to 92)",
+  "main": "unique-colors.js",
+  "keywords": [
+    "colors",
+    "unique",
+    "perceptually"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

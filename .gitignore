@@ -1,0 +1,8 @@
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+# pm generated files
+node_modules
+bower_components
