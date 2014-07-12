@@ -108,7 +108,7 @@
     return colors.slice(0, n);
   };
 
-  this.unique_random_colors = function (n) {
+  this.unique_shuffled_colors = function (n) {
     if (n > 92) {
       throw new Error('n <= 92');
     }
