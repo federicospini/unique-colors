@@ -1,5 +1,18 @@
 
 /**
+ * expose module
+ *
+ */
+
+var exports;
+
+if( typeof module !== 'undefined' && module.exports ) {
+  exports = module.exports;
+} else {
+  exports = window;
+}
+
+/**
  * unique_colors
  *
  */
@@ -100,7 +113,7 @@
     '#070033'
   ];
 
-  this.unique_colors = function (n) {
+  global.unique_colors = function (n) {
     if (n > 92) {
       throw new Error('n <= 92');
     }
@@ -108,7 +121,7 @@
     return colors.slice(0, n);
   };
 
-  this.unique_shuffled_colors = function (n) {
+  global.unique_shuffled_colors = function (n) {
     if (n > 92) {
       throw new Error('n <= 92');
     }
@@ -130,4 +143,4 @@
 
     return result;
   };
- })(this);
+ })(exports);
