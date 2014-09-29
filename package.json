@@ -1,0 +1,24 @@
+{
+  "name": "unique-colors",
+  "version": "1.0.0",
+  "description": "Unique colors generator",
+  "main": "unique-colors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/federicospini/unique-colors.git"
+  },
+  "keywords": [
+    "colors",
+    "unique",
+    "CMC(I:c)"
+  ],
+  "author": "Federico Spini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/federicospini/unique-colors/issues"
+  },
+  "homepage": "https://github.com/federicospini/unique-colors"
+}
