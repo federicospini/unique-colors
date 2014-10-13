@@ -114,6 +114,8 @@ if( typeof module !== 'undefined' && module.exports ) {
   ];
 
   global.unique_colors = function (n) {
+    n = n || colors.length;
+
     if (n > 92) {
       throw new Error('n <= 92');
     }
@@ -122,6 +124,8 @@ if( typeof module !== 'undefined' && module.exports ) {
   };
 
   global.unique_shuffled_colors = function (n) {
+    n = n || colors.length;
+
     if (n > 92) {
       throw new Error('n <= 92');
     }
