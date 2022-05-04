@@ -147,4 +147,29 @@ if( typeof module !== 'undefined' && module.exports ) {
 
     return result;
   };
+
+    /**
+   * opacity value (0..1)
+   *
+   */
+  global.unique_colors_with_opacity = function (n, opacity ) {
+    
+    if (opacity < 0 || opacity > 1) {
+      throw new Error(' 0 <= opacity <= 1');
+    }
+    
+    var alpha = Math.floor(opacity * 255).toString(16).padStart(2, 0);
+    return global.unique_colors(n).map(function(x){return x+alpha});
+  };
+
+  global.unique_shuffled_colors_with_opacity = function (n, opacity ) {
+    
+    if (opacity < 0 || opacity > 1) {
+      throw new Error(' 0 <= opacity <= 1');
+    }
+
+    var alpha = Math.floor(opacity * 255).toString(16).padStart(2, 0);
+    return global.unique_shuffled_colors(n).map(function(x){return x+alpha});
+  };
+
  })(exports);
